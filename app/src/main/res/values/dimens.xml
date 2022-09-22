@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- region Margins -->
+    <dimen name="margin_spacing_4">4dp</dimen>
+    <dimen name="margin_spacing_8">8dp</dimen>
+    <dimen name="margin_spacing_16">16dp</dimen>
+    <dimen name="margin_spacing_32">32dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Padding -->
+    <dimen name="padding_spacing_2">2dp</dimen>
+    <dimen name="padding_spacing_8">8dp</dimen>
+    <dimen name="padding_spacing_16">16dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Text -->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+    <!-- endregion -->
+
+    <!-- region LineSpacingExtra -->
+    <dimen name="line_spacing_extra_4">4dp</dimen>
+    <dimen name="line_spacing_extra_8">8dp</dimen>
+    <dimen name="line_spacing_extra_12">12dp</dimen>
+    <!-- endregion -->
+
+    <!-- region BorderRadius -->
+    <dimen name="border_radius_4">4dp</dimen>
+    <dimen name="border_radius_8">8dp</dimen>
+    <dimen name="border_radius_16">16dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Elevation -->
+    <dimen name="elevation_2">2dp</dimen>
+    <dimen name="elevation_8">8dp</dimen>
+    <dimen name="elevation_10">10dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Components -->
+    <dimen name="indicator_page_size">4dp</dimen>
+    <!-- endregion -->
+</resources>
