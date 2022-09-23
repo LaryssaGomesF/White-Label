@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/border_radius_8"
+    tools:backgroundTint="@color/colorPrimary"
+    app:cardCornerRadius="@dimen/margin_spacing_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView_classesName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_8"
+            android:ellipsize="end"
+            android:fontFamily="@font/raleway_medium_italic"
+            android:text="Turma C"
+            android:textColor="@color/colorTextColorPrimary"
+            android:textSize="@dimen/text_size_17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_numberGrade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_8"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/raleway_medium_italic"
+            android:text="Ano: 8 Série"
+            android:textColor="@color/colorTextColorPrimary"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textView_subject"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_classesName" />
+
+        <TextView
+            android:id="@+id/textView_subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_8"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/raleway_medium_italic"
+            android:text="Geografia I"
+            android:textColor="@color/colorTextColorPrimary"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textView_numberGrade"
+            app:layout_constraintTop_toBottomOf="@id/textView_classesName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

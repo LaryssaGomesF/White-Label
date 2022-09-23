@@ -8,12 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimaryVariant">#F4E0D5</color>
-    <color name="colorPrimary">#EAAB42</color>
-    <color name="colorSecondary">#67C6D8</color>
-    <color name="colorSecondaryVariant">#EA7A3A</color>
-    <color name="colorTertiary">#9A71AD</color>
-    <color name="colorTertiaryVariant">#EAEAF2</color>
+    <color name="colorPrimary">#F4E0D5</color>
+    <color name="colorPrimaryVariant">#EAAB42</color>
+    <color name="ColorSecondary">#67C6D8</color>
+    <color name="ColorSecondaryVariant">#EA7A3A</color>
+    <color name="ColorTertiary">#9A71AD</color>
+    <color name="ColorTertiaryVariant">#EAEAF2</color>
 
     <color name="colorBlackPrimary">#232429</color>
     <color name="colorBlackSecondary">#34353C</color>
@@ -25,7 +25,7 @@
 
 
     <!-- region TextColors -->
-    <color name="colorTextColorPrimary">@color/colorBlackPrimary</color>
+    <color name="colorTextColorPrimary">@color/colorWhitePrimary</color>
     <!-- endregion -->
 
 </resources>
