@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FF9800</color>
-    <color name="purple_500">#FFC107</color>
-    <color name="purple_700">#FF5722</color>
-    <color name="teal_200">#4CAF50</color>
-    <color name="teal_700">#8BC34A</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorPrimaryVariant">#AE26F0</color>
+    <color name="colorPrimary">#7412A3</color>
+    <color name="colorSecondary">#F0D832</color>
+    <color name="colorSecondaryVariant">#F0D817</color>
+    <color name="colorTertiary">#3360A3</color>
+    <color name="colorTertiaryVariant">#3E85F0</color>
+
+    <color name="colorBlackPrimary">#232429</color>
+    <color name="colorBlackSecondary">#34353C</color>
+    <color name="colorBlackTertiary">#4C4E5A</color>
+
+    <color name="colorWhitePrimary">#FEFFFF</color>
+    <color name="colorWhitSecondary">#DCDCDC</color>
+    <color name="colorWhiteTertiary">#8F8F8F</color>
+
+
+    <!-- region TextColors -->
+    <color name="colorTextColorPrimary">@color/colorBlackPrimary</color>
+    <!-- endregion -->
+
 </resources>
