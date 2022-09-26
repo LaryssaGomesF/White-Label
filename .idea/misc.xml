@@ -6,6 +6,7 @@
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/drawable/selector_text_color_bottom_navigation.xml" value="0.258" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/drawable/shape_filled_square_bottom_rounded.xml" value="0.258" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/drawable/shape_roudend_square_filled.xml" value="0.2125" />
+        <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/drawable/shape_square_roundend_margin.xml" value="0.258" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/dialog_fragment_loading.xml" value="0.365625" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/fragment_classes.xml" value="0.36666666666666664" />
@@ -13,6 +14,7 @@
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/fragment_schedule.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/item_classes_adapter.xml" value="0.365625" />
+        <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/layout/item_home_adapter.xml" value="0.365625" />
         <entry key="..\:/Users/Usemobile/Desktop/Projetos/whitelabel/white-label-pdi/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
       </map>
     </option>

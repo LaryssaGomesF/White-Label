@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/item"
+    android:layout_margin="@dimen/margin_spacing_8"
+    android:background="@drawable/shape_square_rounded_margin"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView_iconFeature"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/margin_spacing_16"
+        android:src="@drawable/icon_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView_titleFeature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_spacing_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/raleway_medium_italic"
+        android:maxLines="1"
+        android:text="Relatórios"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextColorPrimary"
+        android:textSize="@dimen/text_size_17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_iconFeature" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
