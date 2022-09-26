@@ -23,6 +23,8 @@
 
     <!-- region TextColors -->
     <color name="colorTextColorPrimary">@color/colorWhitePrimary</color>
+    <color name="colorTextColorSecondary">@color/colorBlackPrimary</color>
+    <color name="colorDividerPrimary">@color/colorBlackSecondary</color>
     <!-- endregion -->
 
 

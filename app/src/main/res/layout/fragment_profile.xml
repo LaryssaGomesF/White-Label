@@ -1,9 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ProfileFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_profileUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_filled_square_bottom_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView_profileUser"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/margin_spacing_16"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_profile_mock"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+        <TextView
+            android:id="@+id/textView_nameUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_16"
+            android:fontFamily="@font/raleway_medium_italic"
+            android:text="Fernando Silveira"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextColorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView_profileUser" />
+
+        <TextView
+            android:id="@+id/textView_office"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_16"
+            android:fontFamily="@font/raleway_medium_italic"
+            android:text="Professor Substituto História I"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextColorSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_nameUser" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_profileData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout_profileUser">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_16">
+
+            <ImageView
+                android:id="@+id/imageView_iconEmail"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/margin_spacing_16"
+                android:src="@drawable/icon_email"
+                app:layout_constraintBottom_toBottomOf="@id/textView_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_labelEmail"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/textView_labelEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_spacing_16"
+                android:fontFamily="@font/raleway_medium_italic"
+                android:text="Email"
+                android:textColor="@color/colorTextColorPrimary"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView_iconEmail"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_spacing_8"
+                android:fontFamily="@font/raleway_medium_italic"
+                android:text="fernando.silveira@edu.mg.br"
+                android:textColor="@color/colorTextColorPrimary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView_labelEmail"
+                app:layout_constraintTop_toBottomOf="@id/textView_labelEmail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_dividerEmailAndPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorDividerPrimary"
+            android:layout_marginHorizontal="@dimen/margin_spacing_16"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_16">
+
+            <ImageView
+                android:id="@+id/imageView_iconPhone"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/margin_spacing_16"
+                android:src="@drawable/icon_phone"
+                app:layout_constraintBottom_toBottomOf="@id/textView_phoneNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_labelPhoneNumber"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/textView_labelPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_spacing_16"
+                android:fontFamily="@font/raleway_medium_italic"
+                android:text="Telefone"
+                android:textColor="@color/colorTextColorPrimary"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView_iconPhone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_spacing_8"
+                android:fontFamily="@font/raleway_medium_italic"
+                android:text="(31) 99999-8888"
+                android:textColor="@color/colorTextColorPrimary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView_labelPhoneNumber"
+                app:layout_constraintTop_toBottomOf="@id/textView_labelPhoneNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_dividerPhoneNumberAndInstitution"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorDividerPrimary"
+            android:layout_marginHorizontal="@dimen/margin_spacing_16"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_spacing_16">
+
+            <ImageView
+                android:id="@+id/imageView_iconInstitution"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/margin_spacing_16"
+                android:src="@drawable/icon_institution"
+                app:layout_constraintBottom_toBottomOf="@id/textView_institution"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_labelInstitution"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/textView_labelInstitution"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_spacing_16"
+                android:fontFamily="@font/raleway_medium_italic"
+                android:text="Instituição"
+                android:textColor="@color/colorTextColorPrimary"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView_iconInstitution"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_institution"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_spacing_8"
+                android:fontFamily="@font/raleway_medium_italic"
+                android:text="Escola Municipal Simão Lacerda"
+                android:textColor="@color/colorTextColorPrimary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView_labelInstitution"
+                app:layout_constraintTop_toBottomOf="@id/textView_labelInstitution" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_dividerInstitution"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorDividerPrimary"
+            android:layout_marginHorizontal="@dimen/margin_spacing_16"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
