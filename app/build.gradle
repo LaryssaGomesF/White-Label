@@ -36,24 +36,34 @@ android {
         viewBinding true
     }
     productFlavors{
-        flavorDimensions 'default'
+        flavorDimensions 'client', 'mode'
         client1{
             applicationId "com.example.client1"
             versionCode 1
             versionName "1.0.0"
-            dimension 'default'
+            dimension 'client'
         }
         client2{
             applicationId "com.example.client2"
             versionCode 1
             versionName "1.0.0"
-            dimension 'default'
+            dimension 'client'
         }
         client3{
             applicationId "com.example.client3"
             versionCode 1
             versionName "1.0.0"
-            dimension 'default'
+            dimension 'client'
+        }
+        full {
+            dimension 'mode'
+            applicationIdSuffix '.full'
+            manifestPlaceholders.appNameSuffix = ".full"
+        }
+        demo {
+            dimension 'mode'
+            applicationIdSuffix '.demo'
+            manifestPlaceholders.appNameSuffix = ".demo"
         }
     }
 }

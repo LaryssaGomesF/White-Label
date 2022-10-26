@@ -24,21 +24,38 @@ class FetchHomeFeaturesRepositoryImp @Inject constructor(
                             icon = R.drawable.icon_pedagogical_plan
                         ),
                         FeaturesHomeDomain(
-                            title = "Relatórios",
+                            title = "Comunicados",
                             icon = R.drawable.icon_arrow_back
                         ),
                         FeaturesHomeDomain(
-                            title = "Relatórios",
+                            title = "Turmas",
+                            icon = R.drawable.icon_arrow_back
+                        )
+                    )
+                )
+            } catch (e: Exception) {
+                throw e
+            }
+        }
+    }
+
+    override suspend fun fetchHomeFeaturesStudents(): Flow<List<FeaturesHomeDomain>> {
+        return flow {
+            try {
+                emit(
+                    listOf(
+                        FeaturesHomeDomain(
+                            title = "Boletim",
+                            icon = R.drawable.icon_pedagogical_plan
+                        ),
+                        FeaturesHomeDomain(
+                            title = "Comunicados",
                             icon = R.drawable.icon_arrow_back
                         ),
                         FeaturesHomeDomain(
-                            title = "Relatórios",
+                            title = "Disciplinas",
                             icon = R.drawable.icon_arrow_back
-                        ),
-                        FeaturesHomeDomain(
-                            title = "Relatórios",
-                            icon = R.drawable.icon_arrow_back
-                        ),
+                        )
                     )
                 )
             } catch (e: Exception) {
