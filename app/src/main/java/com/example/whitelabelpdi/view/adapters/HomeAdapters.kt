@@ -11,11 +11,11 @@ import com.example.whitelabelpdi.view.model.HomeItemView
 class HomeAdapters : RecyclerView.Adapter<HomeAdapters.HomeItemViewHolder>() {
 
     private var list: MutableList<HomeItemView> = mutableListOf()
-    private lateinit var onClickListener: (String) -> Unit
+    private lateinit var onClickListener: (Int) -> Unit
 
     class HomeItemViewHolder(
         private val itemBinding: ItemHomeAdapterBinding,
-        private val onClick: (String) -> Unit,
+        private val onClick: (Int) -> Unit,
         private val contextParent: Context
     ) :
         RecyclerView.ViewHolder(itemBinding.root) {
@@ -33,7 +33,7 @@ class HomeAdapters : RecyclerView.Adapter<HomeAdapters.HomeItemViewHolder>() {
             }
             itemBinding.item.apply {
                 setOnClickListener {
-                    onClick.invoke(item.title)
+                    onClick.invoke(item.id)
                 }
             }
 
@@ -64,7 +64,7 @@ class HomeAdapters : RecyclerView.Adapter<HomeAdapters.HomeItemViewHolder>() {
         notifyItemRangeInserted(startIndex, list.size)
     }
 
-    fun setOnClick(click: (String) -> Unit) {
+    fun setOnClick(click: (Int) -> Unit) {
         this.onClickListener = click
     }
 

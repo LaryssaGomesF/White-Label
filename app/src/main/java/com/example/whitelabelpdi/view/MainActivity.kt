@@ -1,7 +1,7 @@
 package com.example.whitelabelpdi.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.whitelabelpdi.R
@@ -17,6 +17,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initNavHost()
+        setUpToolbar()
         configureBottomNavigation()
     }
 
@@ -26,10 +27,27 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         ) as NavHostFragment
     }
 
+    private fun setUpToolbar() {
+        setUpToolbar(
+            binding.toolbar,
+            R.string.title_empty
+        )
+        setDisplayHome(false)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun configureBottomNavigation() {
         navHostFragment.navController.apply {
             binding.bnBottomNavigate.setupWithNavController(this)
         }
     }
+
 
 }

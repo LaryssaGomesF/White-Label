@@ -11,4 +11,13 @@ import com.example.whitelabelpdi.view.common.BaseFragment
 
 class ScheduleFragment : BaseFragment<FragmentScheduleBinding>() {
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpToolbar()
+    }
+
+    private fun setUpToolbar() {
+        setDisplayHome(false)
+        setToolbarTitle(R.string.title_schedule)
+    }
 }

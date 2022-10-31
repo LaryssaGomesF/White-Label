@@ -4,17 +4,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.whitelabelpdi.common.pagestate.ErrorState
 import com.example.whitelabelpdi.common.pagestate.LoadingState
 import com.example.whitelabelpdi.common.pagestate.NoneState
 import com.example.whitelabelpdi.common.pagestate.SuccessState
 import com.example.whitelabelpdi.databinding.FragmentHomeBinding
-import com.example.whitelabelpdi.view.adapters.ClassesAdapters
 import com.example.whitelabelpdi.view.adapters.HomeAdapters
 import com.example.whitelabelpdi.view.common.BaseFragment
-import com.example.whitelabelpdi.view.model.ClassesView
 import com.example.whitelabelpdi.view.model.HomeItemView
-import com.example.whitelabelpdi.view.viewmodel.ClassesViewModel
 import com.example.whitelabelpdi.view.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -31,11 +29,24 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setUpRecyclerViewHomeFeatures()
         setUpObservers()
-        getFeatures()
+        getConfig()
+        setUpToolbar()
     }
 
-    private fun getFeatures() {
-        viewModel.getFeatures()
+    private fun getConfig(){
+        viewModel.getConfigHome()
+    }
+
+    private fun setUpToolbar(){
+        setDisplayHome(false)
+    }
+
+    private fun getFeaturesTeachers() {
+        viewModel.getFeaturesTeachers()
+    }
+
+    private fun getFeaturesStudents() {
+        viewModel.getFeaturesStudents()
     }
 
     private fun setUpObservers() {
@@ -56,6 +67,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 }
             }
         }
+
+        viewModel.configIsTeachers.observe(viewLifecycleOwner){ isTeachers ->
+            if(isTeachers)  getFeaturesTeachers() else getFeaturesStudents()
+        }
     }
 
     private fun successGetFeatures(list: List<HomeItemView>) {
@@ -68,8 +83,26 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun setOnClickRecyclerViewHomeFeatures() {
-        homeAdapter.setOnClick {
-            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show() //Navigate here after
+        homeAdapter.setOnClick { id ->
+            when(id){
+                0 -> {
+
+                }
+                1 -> {
+
+                }
+                2 -> {}
+                3 -> {
+                    findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToClassesFragment())
+                }
+                4 -> {}
+                5 -> {
+                    findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToClassesFragment())
+                }
+                else -> {
+
+                }
+            }
         }
     }
 

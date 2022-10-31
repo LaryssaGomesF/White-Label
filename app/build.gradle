@@ -49,21 +49,15 @@ android {
             versionName "1.0.0"
             dimension 'client'
         }
-        client3{
-            applicationId "com.example.client3"
-            versionCode 1
-            versionName "1.0.0"
-            dimension 'client'
-        }
-        full {
+        students {
             dimension 'mode'
-            applicationIdSuffix '.full'
-            manifestPlaceholders.appNameSuffix = ".full"
+            applicationIdSuffix '.students'
+            manifestPlaceholders.appNameSuffix = ".students"
         }
-        demo {
+        teachers {
             dimension 'mode'
-            applicationIdSuffix '.demo'
-            manifestPlaceholders.appNameSuffix = ".demo"
+            applicationIdSuffix '.teachers'
+            manifestPlaceholders.appNameSuffix = ".teachers"
         }
     }
 }

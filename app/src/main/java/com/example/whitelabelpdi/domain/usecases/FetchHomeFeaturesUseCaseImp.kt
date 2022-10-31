@@ -8,7 +8,12 @@ import javax.inject.Inject
 class FetchHomeFeaturesUseCaseImp @Inject constructor(
     private val fetchHomeFeaturesRepository: FetchHomeFeaturesRepository
 ) : FetchHomeFeaturesUseCase {
-    override suspend fun fetchHomeFeatures(): Flow<List<FeaturesHomeDomain>> {
-        return fetchHomeFeaturesRepository.fetchHomeFeatures()
+
+    override suspend fun fetchHomeFeaturesTeachers(): Flow<List<FeaturesHomeDomain>> {
+        return fetchHomeFeaturesRepository.fetchHomeFeaturesTeachers()
+    }
+
+    override suspend fun fetchHomeFeaturesStudents(): Flow<List<FeaturesHomeDomain>> {
+        return fetchHomeFeaturesRepository.fetchHomeFeaturesStudents()
     }
 }

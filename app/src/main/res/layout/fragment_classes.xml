@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".view.ClassesFragment">
 
+
     <TextView
         android:id="@+id/textView_classesTitle"
         android:layout_width="0dp"

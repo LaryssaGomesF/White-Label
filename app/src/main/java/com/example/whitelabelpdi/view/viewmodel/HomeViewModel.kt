@@ -11,6 +11,7 @@ import com.example.whitelabelpdi.common.pagestate.ErrorState
 import com.example.whitelabelpdi.common.pagestate.LoadingState
 import com.example.whitelabelpdi.common.pagestate.PageState
 import com.example.whitelabelpdi.common.pagestate.SuccessState
+import com.example.whitelabelpdi.config.Config
 import com.example.whitelabelpdi.domain.models.asView
 import com.example.whitelabelpdi.domain.usecases.FetchHomeFeaturesUseCase
 import com.example.whitelabelpdi.view.model.ClassesView
@@ -27,7 +28,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val fetchHomeFeaturesUseCase: FetchHomeFeaturesUseCase
+    private val fetchHomeFeaturesUseCase: FetchHomeFeaturesUseCase,
+    private val Config: Config
 ): ViewModel() {
 
     private val _featuresHome: MutableLiveData<PageState<List<HomeItemView>, BaseFailure>> =
@@ -35,9 +37,49 @@ class HomeViewModel @Inject constructor(
     val featuresHome: LiveData<PageState<List<HomeItemView>, BaseFailure>>
         get() = _featuresHome
 
-    fun getFeatures(){
+  private val _configIsTeachers: MutableLiveData<Boolean> =
+        MutableLiveData()
+    val configIsTeachers: LiveData<Boolean>
+        get() = _configIsTeachers
+
+
+    fun getConfigHome(){
+        _configIsTeachers.postValue(Config.isTeachers)
+    }
+
+    fun getFeaturesTeachers(){
         viewModelScope.launch {
-            fetchHomeFeaturesUseCase.fetchHomeFeatures()
+            fetchHomeFeaturesUseCase.fetchHomeFeaturesTeachers()
+                .flowOn(Dispatchers.IO)
+                .onStart {
+                    _featuresHome.postValue(LoadingState)
+                }.catch { error ->
+                    if (error is UnknownHostException) {
+                        _featuresHome.postValue(
+                            ErrorState(
+                                NoNetworkConnectionFailure()
+                            )
+                        )
+                    } else {
+                        _featuresHome.postValue(
+                            ErrorState(
+                                RequestFailure()
+                            )
+                        )
+                    }
+                }.map { list ->
+                    list.map { homeFeatures ->
+                        homeFeatures.asView()
+                    }
+                }.collect { list ->
+                    _featuresHome.postValue(SuccessState(list))
+                }
+        }
+    }
+
+    fun getFeaturesStudents(){
+        viewModelScope.launch {
+            fetchHomeFeaturesUseCase.fetchHomeFeaturesStudents()
                 .flowOn(Dispatchers.IO)
                 .onStart {
                     _featuresHome.postValue(LoadingState)

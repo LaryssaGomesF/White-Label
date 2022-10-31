@@ -1,6 +1,7 @@
 package com.example.whitelabelpdi.view
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
@@ -29,10 +30,16 @@ class ClassesFragment : BaseFragment<FragmentClassesBinding>() {
         getClasses()
         setUpRecyclerViewClasses()
         setUpObservers()
+        setUpToolbar()
     }
+
 
     private fun getClasses() {
         viewModel.getClasses("")
+    }
+
+    private fun setUpToolbar(){
+        setDisplayHome(true)
     }
 
     private fun setUpObservers() {

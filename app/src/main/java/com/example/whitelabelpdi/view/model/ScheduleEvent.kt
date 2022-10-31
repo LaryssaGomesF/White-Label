@@ -1,7 +1,8 @@
 package com.example.whitelabelpdi.view.model
 
-data class HomeItemView(
+data class ScheduleEvent(
+    val data: String,
     val title: String,
-    val icon: Int,
+    val description: String,
     val id: Int
 )

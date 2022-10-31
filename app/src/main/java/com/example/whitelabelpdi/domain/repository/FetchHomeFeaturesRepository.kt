@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface FetchHomeFeaturesRepository {
 
-    suspend fun fetchHomeFeatures(): Flow<List<FeaturesHomeDomain>>
+    suspend fun fetchHomeFeaturesTeachers(): Flow<List<FeaturesHomeDomain>>
 
     suspend fun fetchHomeFeaturesStudents(): Flow<List<FeaturesHomeDomain>>
 }
