@@ -13,9 +13,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_events"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_schedule"
         android:layout_margin="@dimen/margin_spacing_16"
         app:layout_constraintTop_toBottomOf="@id/calendarView_events" />
 

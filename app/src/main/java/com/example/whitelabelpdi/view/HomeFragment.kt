@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.whitelabelpdi.R
 import com.example.whitelabelpdi.common.pagestate.ErrorState
 import com.example.whitelabelpdi.common.pagestate.LoadingState
 import com.example.whitelabelpdi.common.pagestate.NoneState
@@ -39,6 +40,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private fun setUpToolbar(){
         setDisplayHome(false)
+        setToolbarTitle(R.string.title_home)
     }
 
     private fun getFeaturesTeachers() {
