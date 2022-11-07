@@ -15,8 +15,26 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+        android.applicationVariants.all { variant ->
+            def routesPropertiesFile
+            def fileNameRemotes
+            def fileName
+            fileName = "routes.properties"
+            fileNameRemotes = "ROUTES_PROPERTIES"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+            if (System.getenv(fileNameRemotes) == null)
+                routesPropertiesFile = rootProject.file(fileName)
+            else
+                routesPropertiesFile = new File(System.getenv(fileNameRemotes))
+
+            def routesProperties = new Properties()
+            routesProperties.load(new FileInputStream(routesPropertiesFile))
+
+            buildConfigField("String", "BASE_URL", routesProperties["${variant.name}_BASE_URL"])
+
+        }
+
     }
 
     buildTypes {
