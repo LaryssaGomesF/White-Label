@@ -13,6 +13,9 @@ The intuitive part of the project is the training in handling the layout and bas
 
 
 ## Screenshots 
-![image](https://github.com/LaryssaGomesF/White-Label/blob/main/app/src/main/res/drawable/printapp1.jpeg)
-![image](https://github.com/LaryssaGomesF/White-Label/blob/main/app/src/main/res/drawable/printapp2.jpeg)
-![image](https://github.com/LaryssaGomesF/White-Label/blob/main/app/src/main/res/drawable/printapp3.jpeg)
+
+<p align="center">
+  <img src="https://github.com/LaryssaGomesF/White-Label/blob/main/app/src/main/res/drawable/printapp1.jpeg" width="30%" />
+  <img src="https://github.com/LaryssaGomesF/White-Label/blob/main/app/src/main/res/drawable/printapp2.jpeg" width="30%" />
+  <img src="https://github.com/LaryssaGomesF/White-Label/blob/main/app/src/main/res/drawable/printapp3.jpeg" width="30%" />
+</p>
